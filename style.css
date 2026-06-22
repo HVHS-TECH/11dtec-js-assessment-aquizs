@@ -2,11 +2,15 @@ body {
     background-color: #F9F8F9;
 }
 
+/* Divider */
+
 .container {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 400px auto;
 }
+
+/* Divider */
 
 .nav {
     grid-column: 2;
@@ -16,16 +20,21 @@ body {
     gap: 100px;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 100px;
 }
 
 .nav a {
  font-size: 30px;
- text-decoration: none;   
+ text-decoration: none;
+ color: black;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
 }
 
 .nav a:hover {
     text-decoration: underline;
 }
+
+/* Divider */
 
 .logo {
     grid-column: 1;
@@ -34,6 +43,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: flex-start;
+    padding-left: 50px;
 }
 
 .logo img{
@@ -42,15 +52,44 @@ body {
     object-fit: cover;
 }
 
-
-
+/* Divider */
 
 .hero {
-    grid-column: 2;
+    grid-column: 2; 
     grid-row: 2;
+    transform: translate(-80px);
 }
 
 .hero img{
     width: 100%;
     height: auto;
+}
+
+/* Divider */
+
+.homename {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding-left: 50px;
+}
+
+.homename h1 {
+    font-size: 70px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Divider */
+
+.description {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding-top: 130px;
+    padding-left: 50px;
+}
+
+.description p {
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
