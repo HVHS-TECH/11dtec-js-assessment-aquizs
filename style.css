@@ -94,14 +94,40 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Divider */
+
 .products {
     grid-column: 1;
     grid-row: 2;
 
-    padding-top: 200px;
+    padding-top: 270px;
+    padding-left: 50px;
 }
 
 .products img {
-    width: 40%;
+    width: 35%;
     height: auto;
+}
+
+/* Divider */
+
+.review {
+    grid-column: 1;
+    grid-row: 2;
+    padding-top: 335px;
+    padding-left: 50px;
+}
+
+.review img{
+    width: 71%;
+    height: auto;
+}
+
+/* INDEX CSS ABOVE */
+/* PRODUCTS CSS BELOW */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px auto auto;
 }
