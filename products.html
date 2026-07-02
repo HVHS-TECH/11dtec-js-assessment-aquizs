@@ -23,55 +23,60 @@
 
 </div>
 
-<div class="buttoncontainer">
-    <button class=""
-</div>
-
 
 
 <div class="container2">
 
+<div id="myBtnContainer" class="buttoncontainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show All</button>
+    <button class="btn" onclick="filterSelection('space')"> Space</button>
+    <button class="btn" onclick="filterSelection('clothing')"> Clothing</button>
+    <button class="btn" onclick="filterSelection('vehicles')"> Vehicles</button>
+    <button class="btn" onclick="filterSelection('companies')"> Companies</button>
+</div>
+
 <div class="cards">
 
-        <div class="card">
+        <div class="card clothing">
             <img src="images/vantageshirt.png" alt="Vantage running shirt white">
-            <h1>Vantage Running Shirt</h1>
+            <h1>Vantage Running Shirt (White)</h1>
             <h2>$40</h2>
         </div>
 
-        <div class="card">
+        <div class="card vehicles">
             <img src="images/apache.jpg" alt="apache ">
             <h1>AH-64E Apache Helicopter</h1>
             <h2>$40,000,000</h2>
         </div>
 
-        <div class="card">
+        <div class="card companies">
             <img src="images/chatgptlogo.png" alt="chatgpt">
             <h1>ChatGPT</h1>
             <h2>$1,000,000,000,000</h2>
         </div>
 
-        <div class="card">
+        <div class="card space">
             <img src="images/moon.jpg" alt="The moon">
             <h1>Moon</h1>
             <h2>$20,000,000,000,000,000</h2>
         </div>
 
-        <div class="card">
+        <div class="card companies space">
             <img src="images/nasalogo.jpg" alt="nasa">
             <h1>NASA</h1>
             <h2>$1,900,000,000,000</h2>
         </div>
 
-        <div class="card">
-            <img src="" alt="">
-            <h1></h1>
+        <div class="card clothing">
+            <img src="images/blackvantageshirt.png" alt="black vantage running shirt">
+            <h1>Vantage Running Shirt (Black)</h1>  
+            <h2>$40</h2>
         </div>
     </div>
 </div>
 
 <div id="JavaScriptOutput"></div>
-<script src="script.js"></script>
+<script src="products.js"></script>
 
 </body>
 </html>

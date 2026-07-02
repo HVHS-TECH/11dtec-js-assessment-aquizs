@@ -163,6 +163,11 @@ body {
     border-radius: 10px;
     text-align: center;
     overflow: hidden;
+    display:none;
+}
+
+.card.show {
+    display: block;
 }
 
 .card img {
@@ -174,4 +179,20 @@ body {
 .card h1 {
     font-size: 20px;
     margin: 10px 0;
+}
+
+.buttoncontainer {
+    display:grid;
+    grid-column: 1;
+    grid-row: 2;
+
+    gap: 20px;
+    padding-left: 100px;
+}
+
+.buttoncontainer button {
+    width: 50%;
+    height: auto;
+
+    font-size: 30px;
 }
