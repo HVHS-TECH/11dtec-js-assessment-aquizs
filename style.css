@@ -147,27 +147,22 @@ body {
 }
 
 .cards {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 5;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 100px;
-    gap: 20px;
+    gap: 50px;
 }
 
 .card {
     background-color: white;
-    width: 25%;
+    width: 20%;
     border-radius: 10px;
     text-align: center;
     overflow: hidden;
-    display:none;
-}
-
-.card.show {
-    display: block;
 }
 
 .card img {
@@ -179,20 +174,4 @@ body {
 .card h1 {
     font-size: 20px;
     margin: 10px 0;
-}
-
-.buttoncontainer {
-    display:grid;
-    grid-column: 1;
-    grid-row: 2;
-
-    gap: 20px;
-    padding-left: 100px;
-}
-
-.buttoncontainer button {
-    width: 50%;
-    height: auto;
-
-    font-size: 30px;
 }
