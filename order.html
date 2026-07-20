@@ -10,33 +10,36 @@
 
 
         <div id="products">
-            <h2>products</h2>
+
 
             <div class="cards">
+                <img src="images/vantageshirt.png" alt="vantage shirt product">
                 <h3>Vantage Shirt</h3>
                 <p>$40</p>
                 <button onclick="addToCart('Vantage Shirt',40)">Add</button>
             </div>
 
             <div class="cards">
+                <img src="images/moon.jpg" alt="moon product">
                 <h3>Moon</h3>
                 <p>$999,999</p>
                 <button onclick="addToCart('Moon',999999)">Add</button>
             </div>
 
             <div class="cards">
+                <img src="images/apache.jpg" alt="apache helicopter">
                 <h3>Apache Helicopter</h3>
                 <p>$25,000,000</p>
                 <button onclick="addToCart('Apache Helicopter',25000000)">Add</button>
             </div>
-        </div>
 
             <div class="cards">
+                <img src="images/rocket.jpg" alt="rocket">
                 <h3>Rocket</h3>
                 <p>$500,000,000</p>
                 <button onclick="addToCart('Rocket',500000000)">Add</button>
             </div>
-</div>
+        </div>
 
         <div id="cart">
             <h2>Cart</h2>
@@ -50,12 +53,15 @@
 
                 <label>Money:</label>
                 <input type="number" id="moneyField" placeholder="Money">
+
+                <button onclick="checkout()">Checkout</button>
+                <button onclick="resetOrder()">Reset Order</button>
             </form>
+
+            <div id="receipt"></div>
+
         </div>
-
-
-
-<div id="JavaScriptOutput"></div>
+</div>
 
 
 <script src="script.js"></script>
