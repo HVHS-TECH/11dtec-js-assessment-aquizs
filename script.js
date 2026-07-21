@@ -7,7 +7,7 @@ function addToCart(name, price) {
     let found = false;
     for(let i=0; i<itemNames.length; i++) {
         if(itemNames[i] == name) {
-            itemQantity[i] = itemQuantiy[i] + 1;
+            itemQuantity[i] = itemQuantiy[i] + 1;
             found = true;
         }
     }
