@@ -7,7 +7,7 @@ function addToCart(name, price) {
     let found = false;
     for(let i=0; i<itemNames.length; i++) {
         if(itemNames[i] == name) {
-            itemQuantity[i] = itemQuantiy[i] + 1;
+            itemQuantity[i] = itemQuantity[i] + 1;
             found = true;
         }
     }
@@ -28,10 +28,11 @@ function displayCart() {
     for(let i=0; i<itemNames.length; i++) {
         let cost = itemPrices[i] * itemQuantity[i];
 
-        cartOutPut = cartOutput + itemNames[i] + " x" + itemQuantity[i] + " - $" + cost + "<br>";
+        cartOutPut = cartOutPut + itemNames[i] + " x" + itemQuantity[i] + " - $" + cost + "<br>";
         total = total + cost;
     }
 
-    document.getElementById("cartItems").innerHTML = cartOutput
+    document.getElementById("cartItems").innerHTML = cartOutPut
     document.getElementById("total").innerHTML = total;
 }
+
