@@ -14,5 +14,24 @@ function addToCart(name, price) {
 
     if(found == false) {
         itemNames.push(name);
+        itemPrices.push(price);
+        itemQuantity.push(1);
     }
+
+    displayCart();
+}
+
+function displayCart() {
+    let cartOutPut = "";
+    let total = 0;
+
+    for(let i=0; i<itemNames.length; i++) {
+        let cost = itemPrices[i] * itemQuantity[i];
+
+        cartOutPut = cartOutput + itemNames[i] + " x" + itemQuantity[i] + " - $" + cost + "<br>";
+        total = total + cost;
+    }
+
+    document.getElementById("cartItems").innerHTML = cartOutput
+    document.getElementById("total").innerHTML = total;
 }
