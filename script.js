@@ -14,13 +14,14 @@ function addToCart(name, price) {
         if(itemNames[i] == name) { 
             //adds on the quantity of the product
             itemQuantity[i] = itemQuantity[i] + 1;
-            //puts in an array and if there already is then increase the quantity
+            //the item is in the cart now
             found = true;
         }
     }
 
     //if its not found then put in the array and put the name price and quantity info
     if(found == false) {
+        //it puts the name price and quantity in to the array
         itemNames.push(name);
         itemPrices.push(price);
         itemQuantity.push(1);
@@ -36,33 +37,53 @@ function displayCart() {
     let cartOutPut = "";
     //nothing in there at the start
     let total = 0;
-
+    //scan through the items with their index number until find the one that was pressed and add it to array
     for(let i=0; i<itemNames.length; i++) {
+        //which index number their price x the quantity bought to find out the total price of that product
         let cost = itemPrices[i] * itemQuantity[i];
-
+        //what cartoutput has with the cartoutput item name through their index number the "x" is for the x how many and item quantity i and their cost just what gonna be written on the html to see
         cartOutPut = cartOutPut + itemNames[i] + " x" + itemQuantity[i] + " - $" + cost + "<br>";
+        //total is how much everything cost
         total = total + cost;
     }
-
+    //display the things on the html
     document.getElementById("cartItems").innerHTML = cartOutPut
     document.getElementById("total").innerHTML = total;
 }
 
+//checkout function
 function checkOut() {
+    //takes the values from namefield and moneyfield that we got 
     let name = document.getElementById("nameField").value;
     let money = Number(document.getElementById("moneyField").value);
+    //total is cost by default 0
     let total = 0;
-    
+    //scan through the items with their index number until find the one that was pressed and add it to array
     for(let i=0; i<itemNames.length; i++) {
+        //item prices from index times itemquantity by index is the total
         total = total + (itemPrices[i] * itemQuantity[i]);
     }
-
+    //if the total cost is more than the inputted money then do an alert and not let you proceed
     if(money < total) {
         alert("Not Enough Money");
     }
+    //otherwise if money is bigger than total then do the change variable of money - total
     else {
         let change = money - total;
-
+        //puts into html what you see and the writing stuff
         document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change;
     }
+}
+//reset order function to clear your order
+function resetOrder() {
+    //sets the item names prices and quantity to nothing to reset it back to 0
+    itemNames = [];
+    itemPrices = [];
+    itemQuantity = [];
+    //sets the items total cost recipet name and money inputted to nothing except for cart and total because otherwise it would be nothing
+    document.getElementById("cartItems").innerHTML = "Cart is empty";
+    document.getElementById("total").innerHTML = "0";
+    document.getElementById("receipt").innerHTML = "";
+    document.getElementById("nameField").value = "";
+    document.getElementById("moneyField").value = "";
 }
