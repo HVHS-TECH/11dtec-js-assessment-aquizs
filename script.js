@@ -48,3 +48,21 @@ function displayCart() {
     document.getElementById("total").innerHTML = total;
 }
 
+function checkOut() {
+    let name = document.getElementById("nameField").value;
+    let money = Number(document.getElementById("moneyField").value);
+    let total = 0;
+    
+    for(let i=0; i<itemNames.length; i++) {
+        total = total + (itemPrices[i] * itemQuantity[i]);
+    }
+
+    if(money < total) {
+        alert("Not Enough Money");
+    }
+    else {
+        let change = money - total;
+
+        document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change;
+    }
+}
