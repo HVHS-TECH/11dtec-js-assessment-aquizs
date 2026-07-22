@@ -8,7 +8,7 @@ function addToCart(name, price) {
 
     //found lets you know if the item is in the cart if not when addTocart function then add to array and add is false to start with otherwise it will just add it
     let found = false;
-    //scan through the items with their index number until find the one that was pressed and add it to array
+    //scans through the array as a loop to see whats in there
     for(let i=0; i<itemNames.length; i++) {
         //checks if the index number matches the name of the thing
         if(itemNames[i] == name) { 
@@ -37,7 +37,7 @@ function displayCart() {
     let cartOutPut = "";
     //nothing in there at the start
     let total = 0;
-    //scan through the items with their index number until find the one that was pressed and add it to array
+    //scans through the array as a loop to see whats in there
     for(let i=0; i<itemNames.length; i++) {
         //which index number their price x the quantity bought to find out the total price of that product
         let cost = itemPrices[i] * itemQuantity[i];
@@ -58,7 +58,7 @@ function checkOut() {
     let money = Number(document.getElementById("moneyField").value);
     //total is cost by default 0
     let total = 0;
-    //scan through the items with their index number until find the one that was pressed and add it to array
+    //scans through the array as a loop to see whats in there
     for(let i=0; i<itemNames.length; i++) {
         //item prices from index times itemquantity by index is the total
         total = total + (itemPrices[i] * itemQuantity[i]);
