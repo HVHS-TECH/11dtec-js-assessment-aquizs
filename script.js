@@ -58,20 +58,30 @@ function checkOut() {
     let money = Number(document.getElementById("moneyField").value);
     //total is cost by default 0
     let total = 0;
+    //store a list of purchased items
+    let items = "";
     //scans through the array as a loop to see whats in there
     for(let i=0; i<itemNames.length; i++) {
         //item prices from index times itemquantity by index is the total
         total = total + (itemPrices[i] * itemQuantity[i]);
+        //puts the item amounts in the recipt same code as the display cart too
+        items = items + itemNames[i] + "x" + itemQuantity[i] + " - $" + (itemPrices[i] * itemQuantity[i]) + "<br>";
+    }
+    //if there is no name written then it will alert and prevent you from continuing
+    if(name == ""){
+        alert("enter a name");
+        //stops the checkout function even after ok is pressed
+        return;
     }
     //if the total cost is more than the inputted money then do an alert and not let you proceed
     if(money < total) {
-        alert("Not Enough Money");
+        alert("too poor lol noob");
     }
     //otherwise if money is bigger than total then do the change variable of money - total
     else {
         let change = money - total;
         //puts into html what you see and the writing stuff
-        document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change;
+        document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br><br>" + "Items:<br>" + items + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change;
     }
 }
 //reset order function to clear your order
