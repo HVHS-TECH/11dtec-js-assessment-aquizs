@@ -53,6 +53,49 @@
                 <p>$25</p>
                 <button onclick="addToCart('Tung Tung Tung Sahur',25)">Add</button>
             </div>
+
+            <div class="cards">
+                <img src="images/rice.jpg" alt="bowl of rice">
+                <h3>Bowl of Rice</h3>
+                <p>$3</p>
+                <button onclick="addToCart('Bowl Of Rice',3)">Add</button>
+            </div>
+
+            <div class="cards">
+                <img src="images/honey.jpg" alt="A jar of honey">
+                <h3>Jar Of Honey</h3>
+                <p>$15</p>
+                <button onclick="addToCart('Jar Of Honey',15)">Add</button>
+            </div>
+
+            <div class="cards">
+                <img src="images/money.jpeg" alt="Crate of money">
+                <h3>Crate Of Money</h3>
+                <p>$1,000,000</p>
+                <button onclick="addToCart('Crate Of Money',1000000)">Add</button>
+            </div>
+
+            <div class="cards">
+                <img src="images/fishingrod.png" alt="fishing rod">
+                <h3>Fishing Rod</h3>
+                <p>$300</p>
+                <button onclick="addToCart('Fishing Rod',300)">Add</button>
+            </div>
+
+            <div class="cards">
+                <img src="images/tree.jpg" alt="Tree">
+                <h3>Tree</h3>
+                <p>$2,500</p>
+                <button onclick="addToCart('Tree',2500)">Add</button>
+            </div>
+
+            <div class="cards">
+                <img src="images/satellite.webp" alt="satellite">
+                <h3>Satellite</h3>
+                <p>$200,000,000</p>
+                <button onclick="addToCart('Crate Of Money',200000000)">Add</button>
+            </div>
+
         </div>
 
         <div id="cart">
@@ -64,10 +107,10 @@
             <form onsubmit="return false;">
                 <label>Name:</label>
                 <input type="text" id="nameField" placeholder="Name">
-
+                <br>
                 <label>Money:</label>
                 <input type="number" id="moneyField" min="0" placeholder="Money">
-
+                <br>
                 <button onclick="checkOut()">Checkout</button>
                 <button onclick="resetOrder()">Reset Order</button>
             </form>

@@ -65,7 +65,7 @@ function checkOut() {
         //item prices from index times itemquantity by index is the total
         total = total + (itemPrices[i] * itemQuantity[i]);
         //puts the item amounts in the recipt same code as the display cart too
-        items = items + itemNames[i] + "x" + itemQuantity[i] + " - $" + (itemPrices[i] * itemQuantity[i]) + "<br>";
+        items = items + itemNames[i] + " x" + itemQuantity[i] + " - $" + (itemPrices[i] * itemQuantity[i]) + "<br>";
     }
     //if there is no name written then it will alert and prevent you from continuing
     if(name == ""){
