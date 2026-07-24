@@ -81,7 +81,7 @@ function checkOut() {
     else {
         let change = money - total;
         //puts into html what you see and the writing stuff
-        document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br><br>" + "Items:<br>" + items + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change;
+        document.getElementById("receipt").innerHTML = "<h2>Receipt</h2>" + "Name: " + name + "<br><br>" + "Items:<br>" + items + "<br>" + "Total: $" + total +"<br>" + "Money: $" + money + "<br>" + "Change: $" + change.toFixed(2);
     }
 }
 //reset order function to clear your order
